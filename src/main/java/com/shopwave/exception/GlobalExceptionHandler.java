@@ -1,3 +1,4 @@
+//Biniyam Girma ATE//176/14
 package com.shopwave.exception;
 
 import org.springframework.http.HttpStatus;
@@ -12,7 +13,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // ✅ Handle ProductNotFoundException
+
     @ExceptionHandler(ProductNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleNotFound(
             ProductNotFoundException ex,
@@ -21,7 +22,7 @@ public class GlobalExceptionHandler {
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request);
     }
 
-    // ✅ Handle validation errors
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGeneral(
             Exception ex,

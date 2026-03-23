@@ -1,3 +1,4 @@
+//Biniyam Girma ATE//176/14
 package com.shopwave.controller;
 
 import com.shopwave.dto.CreateProductRequest;
@@ -21,7 +22,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    // ✅ GET all products (paginated)
+
     @GetMapping
     public ResponseEntity<PagedModel<ProductDTO>> getAllProducts(
             @RequestParam(defaultValue = "0") int page,
@@ -33,13 +34,13 @@ public class ProductController {
         return ResponseEntity.ok(new PagedModel<>(productPage));
     }
 
-    // ✅ GET by ID
+
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    // ✅ CREATE product
+
     @PostMapping
     public ResponseEntity<ProductDTO> createProduct(
             @Valid @RequestBody CreateProductRequest request
@@ -48,7 +49,7 @@ public class ProductController {
                 .body(productService.createProduct(request));
     }
 
-    // ✅ SEARCH products
+
     @GetMapping("/search")
     public ResponseEntity<List<ProductDTO>> searchProducts(
             @RequestParam(required = false) String keyword,
@@ -59,7 +60,7 @@ public class ProductController {
         );
     }
 
-    // ✅ UPDATE stock
+
     @PatchMapping("/{id}/stock")
     public ResponseEntity<ProductDTO> updateStock(
             @PathVariable Long id,

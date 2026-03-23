@@ -1,9 +1,10 @@
+//Biniyam Girma ATE//176/14
 package com.shopwave;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@ComponentScan(basePackages = "com.shopwave")
+
 @SpringBootApplication
 public class ShopwaveStarterApplication {
 
