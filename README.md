@@ -2,9 +2,6 @@
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
-![Build](https://img.shields.io/badge/Build-Passing-success)
-![License](https://img.shields.io/badge/Status-Academic%20Project-orange)
-
 ---
 
 ## 👤 Student Information
@@ -33,7 +30,7 @@ This project implements:
 ## 🧱 Tech Stack
 
 | Layer      | Technology      |
-| ---------- | --------------- |
+|------------|-----------------|
 | Language   | Java 21         |
 | Framework  | Spring Boot 3.x |
 | Database   | H2 (in-memory)  |
@@ -177,34 +174,45 @@ PATCH /api/products/{id}/stock
 
 ### 🔹 Application Startup
 
-```id="x1l0le"
-[Insert screenshot showing "Started ShopwaveStarterApplication"]
-```
+![img.png](images/start.png)
+
 
 ---
 
 ### 🔹 Successful API Response
+### Post
+![post](images/post.png)
 
-```id="l29fd7"
-[Insert Postman/curl response for GET /api/products]
-```
+### Get
+localhost:8080/api/products
+![get 1](images/get1.png)
+
+
+localhost:8080/api/products/1
+![get 2](images/get2.png)
+
+
+localhost:8080/api/products?page=0&size=10
+![get 3](images/get3.png)
+
+
+localhost:8080/api/products?keyword=es
+![get 4](images/get4.png)
 
 ---
 
 ### 🔹 Error Response Example
+404 not found
+![404 not found](images/error1.png)
 
-```id="jow4hu"
-[Insert 404 or validation error response]
-```
-
+bad request
+![bad request](images/error2.png)
 ---
 
 ### 🔹 Tests Passing
 
-```id="9l8qly"
-[Insert screenshot of mvn test showing BUILD SUCCESS]
-```
 
+![test](images/test.png)
 ---
 
 ## ⚠️ Error Handling
@@ -226,7 +234,7 @@ All errors return structured JSON:
 ## 🧪 Testing Strategy
 
 | Test Type       | Description                     |
-| --------------- | ------------------------------- |
+|-----------------|---------------------------------|
 | Unit Test       | ProductService (Mockito)        |
 | Controller Test | ProductController (@WebMvcTest) |
 | Repository Test | JPA queries (@DataJpaTest)      |
@@ -258,23 +266,6 @@ All outputs were:
 * ✅ Layered architecture
 * ✅ Unit & integration tests
 
----
-
-## 🔮 Future Improvements
-
-* 🔐 Authentication (JWT)
-* 🐘 PostgreSQL integration
-* 📄 Swagger API documentation
-* 🐳 Docker containerization
-* ⚡ Caching (Redis)
-
----
-
-## 📌 Notes
-
-* Uses **H2 in-memory database**
-* Data resets after restart
-* Designed for learning and demonstration purposes
 
 ---
 
