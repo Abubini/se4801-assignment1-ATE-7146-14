@@ -1,10 +1,10 @@
-# 🛒 ShopWave Starter — SE4801 Assignment 1
+# ShopWave Starter — SE4801 Assignment 1
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
 ---
 
-## 👤 Student Information
+## Student Information
 
 * **Name:** Biniyam Girma
 * **Student Number:** ATE/7146/14
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 ShopWave Starter is a **Spring Boot 3.x enterprise backend application** built to demonstrate real-world backend development practices.
 
@@ -27,7 +27,7 @@ This project implements:
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Layer      | Technology      |
 |------------|-----------------|
@@ -40,13 +40,13 @@ This project implements:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```id="0zj9kg"
 Controller → Service → Repository → Database
 ```
 
-### 🔹 Layer Responsibilities
+###  Layer Responsibilities
 
 * **Controller** → Handles HTTP requests/responses
 * **Service** → Business logic
@@ -55,7 +55,7 @@ Controller → Service → Repository → Database
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```id="h5yk2g"
 src/main/java/com/shopwave
@@ -70,7 +70,7 @@ src/main/java/com/shopwave
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 🔹 Clone Repository
 
@@ -103,7 +103,7 @@ http://localhost:8080
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash id="39nlm1"
 mvn test
@@ -111,7 +111,7 @@ mvn test
 
 ---
 
-## 📡 API Documentation
+## API Documentation
 
 ### 🔹 Get All Products
 
@@ -168,9 +168,7 @@ PATCH /api/products/{id}/stock
 
 ---
 
-## 📸 API Screenshots
-
-> 📌 Add your screenshots here (REQUIRED for assignment)
+## API Screenshots
 
 ### 🔹 Application Startup
 
@@ -215,7 +213,7 @@ bad request
 ![test](images/test.png)
 ---
 
-## ⚠️ Error Handling
+## Error Handling
 
 All errors return structured JSON:
 
@@ -231,7 +229,7 @@ All errors return structured JSON:
 
 ---
 
-## 🧪 Testing Strategy
+##  Testing Strategy
 
 | Test Type       | Description                     |
 |-----------------|---------------------------------|
@@ -241,43 +239,27 @@ All errors return structured JSON:
 
 ---
 
-## 🤖 AI Usage Disclosure
+## AI Usage Disclosure
 
-This project was developed with assistance from AI tools (ChatGPT) for:
+Some parts of this project were created with the help of AI tools like ChatGPT. Here’s how AI was used:
 
-* Code structure guidance
-* Debugging support
-* Best practices
+* **Code & Debugging**: AI gave suggestions on structure, debugging, and best practices. Every suggestion was reviewed and tested by me before being used.
+*  **Documentation & Writing**(section A & B): Initial drafts of some sections were written by me, then AI helped make them clearer and easier to read.
+*  **Code Snippets**: AI-generated code was used as a starting point. I manually checked, fixed, and adapted everything to make sure it works correctly.
 
-All outputs were:
-
-* Reviewed
-* Tested
-* Understood before submission
+Everything in this project was reviewed and verified by me. The final code, logic, and content are fully my responsibility.
 
 ---
 
-## 🚀 Features Implemented
+## Features Implemented
 
-* ✅ Product CRUD operations
-* ✅ Search & filtering
-* ✅ Stock management
-* ✅ Validation & error handling
-* ✅ Layered architecture
-* ✅ Unit & integration tests
+* Product CRUD operations
+* Search & filtering
+* Stock management
+* Validation & error handling
+* Layered architecture
+* Unit & integration tests
 
 
 ---
 
-## 🎯 Conclusion
-
-This project demonstrates strong understanding of:
-
-* Enterprise backend architecture
-* REST API development
-* Spring Boot ecosystem
-* Testing and maintainability
-
----
-
-⭐ *If this were a real project, you'd star it 😉*
