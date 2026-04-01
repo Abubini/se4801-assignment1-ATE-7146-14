@@ -56,7 +56,8 @@ class ProductRepositoryContainerTest {
     }
 
     @Test
-    void findByNameContainingIgnoreCase_shouldWork() {
+    void findByNameIgnoreCase() {
+        // this should return a non-empty list of products matching the keyword "lap" using a real PostgreSQL container
         Product p = Product.builder()
                 .name("Laptop")
                 .price(BigDecimal.valueOf(1000))

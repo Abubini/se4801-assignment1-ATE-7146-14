@@ -30,7 +30,8 @@ class ProductControllerTest {
     private ProductService productService;
 
     @Test
-    void createProduct_shouldReturn201() throws Exception {
+    void createProduct() throws Exception {
+        //this should return HTTP 201 (Created)
         String json = """
         {
           "name": "Phone",
@@ -54,7 +55,8 @@ class ProductControllerTest {
     }
 
     @Test
-    void getProductById_shouldReturn200() throws Exception {
+    void getProductById() throws Exception {
+        //this should return HTTP 200 (OK)
         ProductDTO dto = ProductDTO.builder()
                 .id(1L)
                 .name("Laptop")
@@ -70,7 +72,8 @@ class ProductControllerTest {
     }
 
     @Test
-    void getProductById_notFound_shouldReturn404() throws Exception {
+    void getProductByIdNotFound() throws Exception {
+        //this should return HTTP 404 (not found)
         when(productService.getProductById(99L))
                 .thenThrow(new ProductNotFoundException(99L));
 
@@ -80,7 +83,8 @@ class ProductControllerTest {
     }
 
     @Test
-    void createProduct_invalid_shouldReturn400() throws Exception {
+    void createProductInvalid() throws Exception {
+        //this should returns HTTP 400 (Bad Request)
         String json = """
         {
           "name": "",
@@ -96,7 +100,8 @@ class ProductControllerTest {
 
 
     @Test
-    void updateStock_shouldReturn200() throws Exception {
+    void updateStock() throws Exception {
+        //this should returns HTTP 200 (OK)
         String json = """
         {
           "delta": -2
@@ -118,7 +123,8 @@ class ProductControllerTest {
 
 
     @Test
-    void updateStock_negative_shouldReturn400() throws Exception {
+    void updateStockNegative() throws Exception {
+        //this should returns HTTP 400 (Bad Request)
         String json = """
         {
           "delta": -100
@@ -136,7 +142,8 @@ class ProductControllerTest {
 
 
     @Test
-    void searchProducts_shouldReturnList() throws Exception {
+    void searchProducts() throws Exception {
+        //this should returns HTTP 200 (OK)
         mockMvc.perform(get("/api/products/search")
                         .param("keyword", "lap"))
                 .andExpect(status().isOk());

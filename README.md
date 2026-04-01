@@ -2,6 +2,7 @@
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![CI](https://github.com/abubini/se4801-assignment1-ATE-7146-14/actions/workflows/ci.yml/badge.svg)
 ---
 
 ## Student Information

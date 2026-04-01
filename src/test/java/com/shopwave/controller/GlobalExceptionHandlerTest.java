@@ -25,7 +25,8 @@ class GlobalExceptionHandlerTest {
     private ProductService productService;
 
     @Test
-    void shouldReturn404FromExceptionHandler() throws Exception {
+    void GlobalExceptionTest() throws Exception {
+        //this should return 404 from exception handler
         when(productService.getProductById(1L))
                 .thenThrow(new ProductNotFoundException(1L));
 

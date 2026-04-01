@@ -20,7 +20,8 @@ class ProductRepositoryTest {
 
 
     @Test
-    void findByNameContainingIgnoreCase_shouldReturnMatchingProducts() {
+    void findByNameIgnoreCase() {
+        //this should return a non-empty list of products matching the keyword "lap" (case-insensitive)
         Product p = Product.builder()
                 .name("Laptop")
                 .price(BigDecimal.valueOf(1000))
@@ -38,7 +39,8 @@ class ProductRepositoryTest {
 
 
     @Test
-    void findByPriceLessThanEqual_shouldFilterCorrectly() {
+    void findByPriceLessThanEqual() {
+        // this should return only products with price less than or equal to 100, specifically "Cheap"
         productRepository.save(Product.builder()
                 .name("Cheap")
                 .price(BigDecimal.valueOf(50))
@@ -60,7 +62,8 @@ class ProductRepositoryTest {
 
 
     @Test
-    void findTopByOrderByPriceDesc_shouldReturnMostExpensive() {
+    void findTopByOrderByPriceDesc() {
+        // this should return the product with the highest price, which is "High"
         productRepository.save(Product.builder()
                 .name("Low")
                 .price(BigDecimal.valueOf(100))

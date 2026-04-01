@@ -27,7 +27,8 @@ class ProductServiceTest {
     private ProductServiceImpl productService;
 
     @Test
-    void createProduct_shouldReturnProductDTO() {
+    void createProduct() {
+        // this should return a ProductDTO with the same name as the created product ("Phone")
         CreateProductRequest request = new CreateProductRequest();
         request.setName("Phone");
         request.setPrice(BigDecimal.valueOf(500));
@@ -49,7 +50,8 @@ class ProductServiceTest {
     }
 
     @Test
-    void getProductById_notFound_shouldThrowException() {
+    void getProductByIdNotFound() {
+        // this should return an exception when the product with the given ID is not found
         when(productRepository.findById(1L)).thenReturn(Optional.empty());
 
         assertThrows(ProductNotFoundException.class, () ->
@@ -57,7 +59,8 @@ class ProductServiceTest {
     }
 
     @Test
-    void updateStock_negative_shouldThrowException() {
+    void updateStockNegative() {
+        // this should return an exception when updating stock results in a negative value
         Product product = Product.builder()
                 .id(1L)
                 .stock(5)
@@ -71,7 +74,8 @@ class ProductServiceTest {
 
 
     @Test
-    void searchProducts_shouldReturnFilteredResults() {
+    void searchProducts() {
+        // this should return a non-empty list of products matching the search keyword "lap"
         Product p = Product.builder()
                 .name("Laptop")
                 .price(BigDecimal.valueOf(1000))
